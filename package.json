@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "vite",
+        "postinstall": "curl -o public/pdf.worker.min.js https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js"
+    },
+    "devDependencies": {
+        "@headlessui/react": "^2.0.0",
+        "@inertiajs/react": "^2.0.0",
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/typography": "^0.5.16",
+        "@tailwindcss/vite": "^4.0.0",
+        "@types/node": "^18.13.0",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.10",
+        "@vitejs/plugin-react": "^4.2.0",
+        "autoprefixer": "^10.4.21",
+        "axios": "^1.8.2",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.5.6",
+        "postcss-nesting": "^13.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.4.17",
+        "typescript": "^5.0.2",
+        "vite": "^6.2.4"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "framer-motion": "^12.22.0",
+        "marked": "^16.0.0",
+        "pdfjs-dist": "^5.3.93",
+        "react-intersection-observer": "^9.16.0",
+        "react-pageflip": "^2.0.3"
+    }
+}

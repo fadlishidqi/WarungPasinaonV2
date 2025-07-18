@@ -1,0 +1,140 @@
+/* resources/css/filament/admin/theme.css */
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+/* =================================
+   CUSTOM DROPDOWN STYLES FOR DARK MODE
+   ================================= */
+
+/* Base select input styling */
+.dark .fi-fo-select .fi-select-input {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+}
+
+.dark .fi-fo-select .fi-select-input:focus {
+    @apply border-primary-500 ring-1 ring-primary-500 bg-gray-800;
+}
+
+/* Dropdown menu container */
+.dark [data-headlessui-state="open"] .fi-select-input + div {
+    @apply bg-gray-800 border-gray-600 shadow-xl;
+}
+
+/* Dropdown list container */
+.dark .fi-dropdown-list {
+    @apply bg-gray-800 border-gray-600;
+}
+
+/* Individual dropdown options */
+.dark .fi-dropdown-list-item {
+    @apply text-gray-100 hover:bg-gray-700 hover:text-white;
+}
+
+/* Selected option */
+.dark .fi-dropdown-list-item[aria-selected="true"] {
+    @apply bg-primary-600 text-white;
+}
+
+/* Placeholder text */
+.dark .fi-select-input::placeholder {
+    @apply text-gray-400;
+}
+
+/* Searchable select input */
+.dark .fi-select-input[role="combobox"] {
+    @apply bg-gray-800 text-gray-100 border-gray-600;
+}
+
+/* Loading state */
+.dark .fi-select-input[aria-busy="true"] {
+    @apply bg-gray-800 border-gray-600;
+}
+
+/* Select arrow/icon */
+.dark .fi-fo-select .fi-input-wrp::after {
+    @apply text-gray-400;
+}
+
+/* Disabled state */
+.dark .fi-fo-select .fi-select-input:disabled {
+    @apply bg-gray-900 text-gray-500 border-gray-700;
+}
+
+/* =================================
+   ADDITIONAL FORM IMPROVEMENTS
+   ================================= */
+
+/* Text input improvements */
+.dark .fi-input {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+}
+
+.dark .fi-input:focus {
+    @apply border-primary-500 ring-1 ring-primary-500;
+}
+
+/* Textarea improvements */
+.dark .fi-textarea {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+}
+
+.dark .fi-textarea:focus {
+    @apply border-primary-500 ring-1 ring-primary-500;
+}
+
+/* Date picker improvements */
+.dark .fi-fo-date-time-picker .fi-input {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+}
+
+/* =================================
+   DROPDOWN MENU SPECIFIC FIXES
+   ================================= */
+
+/* Ensure proper z-index for dropdown */
+.dark .fi-dropdown-panel {
+    @apply bg-gray-800 border-gray-600 shadow-2xl;
+    z-index: 9999;
+}
+
+/* Scrollbar styling for dropdown */
+.dark .fi-dropdown-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dark .fi-dropdown-list::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+}
+
+.dark .fi-dropdown-list::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded;
+}
+
+.dark .fi-dropdown-list::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+/* =================================
+   SEARCH INPUT IN DROPDOWN
+   ================================= */
+
+.dark .fi-select-input[type="search"] {
+    @apply bg-gray-800 text-gray-100 border-gray-600;
+}
+
+.dark .fi-select-input[type="search"]:focus {
+    @apply border-primary-500 ring-1 ring-primary-500;
+}
+
+/* =================================
+   MULTI-SELECT IMPROVEMENTS
+   ================================= */
+
+.dark .fi-fo-select .fi-badge {
+    @apply bg-gray-700 text-gray-100;
+}
+
+.dark .fi-fo-select .fi-badge button {
+    @apply text-gray-300 hover:text-white;
+}
